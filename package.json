@@ -1,71 +1,71 @@
 {
-	"name": "gpg-indicator",
-	"displayName": "GPG Indicator",
-	"description": "Status indicator and unlocker for GPG signing key",
-	"keywords": [
-		"pgp",
-		"gpg",
-		"commit",
-		"multi-root ready"
-	],
-	"author": {
-		"name": "Weida Hong",
-		"url": "https://blog.bitisle.net"
-	},
-	"version": "0.6.0",
-	"publisher": "wdhongtw",
-	"engines": {
-		"vscode": "^1.45.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"icon": "images/icon-color.png",
-	"activationEvents": [
-		"workspaceContains:/.git",
-		"onCommand:gpgIndicator.unlockCurrentKey"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "gpgIndicator.unlockCurrentKey",
-				"title": "Unlock Current Key",
-				"category": "GPG"
-			}
-		],
-		"configuration": {
-			"title": "GPG Indicator",
-			"properties": {
-				"gpgIndicator.statusRefreshInterval": {
-					"type": "number",
-					"default": 30,
-					"minimum": 1,
-					"description": "Background refresh interval (in seconds) for key status."
-				}
-			}
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./"
-	},
-	"devDependencies": {
-		"@types/node": "^13.11.0",
-		"@types/vscode": "^1.45.0",
-		"@typescript-eslint/eslint-plugin": "^5.2.0",
-		"@typescript-eslint/parser": "^5.2.0",
-		"eslint": "^8.1.0",
-		"eslint-plugin-tsdoc": "^0.2.14",
-		"typescript": "^3.8.3"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/wdhongtw/vscode-gpg-indicator"
-	},
-	"preview": false,
-	"dependencies": {}
+  "name": "gpg-indicator",
+  "displayName": "GPG Indicator",
+  "description": "Status indicator and unlocker for GPG signing key",
+  "keywords": [
+    "pgp",
+    "gpg",
+    "commit",
+    "multi-root ready"
+  ],
+  "author": {
+    "name": "Weida Hong",
+    "url": "https://blog.bitisle.net"
+  },
+  "version": "0.6.0",
+  "publisher": "wdhongtw",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "icon": "images/icon-color.png",
+  "activationEvents": [
+    "workspaceContains:/.git",
+    "onCommand:gpgIndicator.unlockCurrentKey"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gpgIndicator.unlockCurrentKey",
+        "title": "Unlock Current Key",
+        "category": "GPG"
+      }
+    ],
+    "configuration": {
+      "title": "GPG Indicator",
+      "properties": {
+        "gpgIndicator.statusRefreshInterval": {
+          "type": "number",
+          "default": 30,
+          "minimum": 1,
+          "description": "Background refresh interval (in seconds) for key status."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.0",
+    "@types/vscode": "^1.67.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "typescript": "^3.8.3"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wdhongtw/vscode-gpg-indicator"
+  },
+  "preview": false,
+  "dependencies": {}
 }
