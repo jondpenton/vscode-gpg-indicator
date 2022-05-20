@@ -96,7 +96,11 @@ export function activate(context: vscode.ExtensionContext) {
         const shortId = event.keyId.substr(event.keyId.length - 16);
         const lockIcon = event.isLocked ? 'lock' : 'unlock';
         const status = `$(${lockIcon}) ${shortId}`;
+        const backgroundColor = event.isLocked
+            ? new vscode.ThemeColor(`statusBarItem.warningBackground`)
+            : undefined;
         keyStatusItem.text = status;
+        keyStatusItem.backgroundColor = backgroundColor;
         keyStatusItem.show();
     });
 }
